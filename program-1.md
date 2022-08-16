@@ -10,3 +10,16 @@ Flatten a nested array. You must account for varying levels of nesting.
 
 
 steamrollArray([1, [2], [3, [[4]]]]);
+<!--code-->
+function steamrollArray(arr) {
+    let flattened = [];
+  arr.map(val)=> {
+      if(!Array.isArray(val)){
+        flattened.push(val);
+      }
+      else{
+        flattened.push(...streamrollArray(val));
+      }
+  })
+  return flattened;
+}
