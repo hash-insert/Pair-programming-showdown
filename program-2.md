@@ -25,7 +25,7 @@ The radius of the earth is 6367.4447 kilometers, and the GM value of earth is 39
 
 <!-- Code Here -->
 function orbitalPeriod(arr) {
- var gravitational parameter = 398600.4418;
+ var GM = 398600.4418;
   var earthRadius = 6367.4447;
   arr.map(obj => {
     let oP = Math.round(2 * Math.PI * Math.sqrt(Math.pow(earthRadius + obj.avgAlt, 3) / GM));
