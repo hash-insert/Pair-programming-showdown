@@ -14,5 +14,22 @@ The character and its pair are paired up in an array, and all the arrays are gro
 * `pairElement("TTGAG")` should return `[["T","A"],["T","A"],["G","C"],["A","T"],["G","C"]]`.
 * `pairElement("CTCTA")` should return `[["C","G"],["T","A"],["C","G"],["T","A"],["A","T"]]`.
 
-
+function pairElement(str) {
+  let pairs = [];
+  str.split('').map(elem => {
+    if (elem === 'G') {
+      pairs.push(['G', 'C'])
+    }
+    else if (elem === 'C') {
+      pairs.push(['C', 'G'])
+    }
+    else if (elem === 'A') {
+      pairs.push(['A', 'T'])
+    }
+    else if (elem === 'T') {
+      pairs.push(['T', 'A'])
+    }
+  })
+  return pairs;
+}
 pairElement("GCG");
